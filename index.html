@@ -18,6 +18,7 @@
       line-height: 1.6;
       background-color: #f4faff;
       color: #333;
+      scroll-behavior: smooth; /* Smooth scrolling */
     }
 
     nav {
@@ -76,6 +77,18 @@
       font-weight: bold;
     }
 
+    /* Hover effect for skills */
+    .skills-list .skill:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Hover effect for project items */
+    .projects .project:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
     section {
       padding: 60px 20px;
       max-width: 1000px;
@@ -102,6 +115,7 @@
       width: 220px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       text-align: center;
+      transition: all 0.3s ease; /* Smooth hover transition */
     }
 
     .projects .project {
@@ -113,6 +127,7 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       flex-wrap: wrap;
       gap: 20px;
+      transition: all 0.3s ease; /* Smooth hover transition */
     }
 
     .projects img {
@@ -134,6 +149,7 @@
       margin-top: 40px;
     }
 
+    /* Mobile responsiveness */
     @media (max-width: 768px) {
       header h1 {
         font-size: 2rem;
@@ -161,12 +177,13 @@
   </nav>
 
   <header>
-    <!-- Updated with your profile image -->
-    <img class="profile-img" src="https://dhananjaya-a.github.io/profile.jpg" alt="Dhananjaya's Profile Picture" />
+    <!-- Updated Profile Image -->
+    <img class="profile-img" src="https://new-image-url.com/profile.jpg" alt="Dhananjaya's Profile Picture" />
     <h1>Dhananjaya A</h1>
     <p>Data Analyst | Excel | SQL | Power BI | Python</p>
-    <!-- Updated with resume link -->
-    <a class="btn" href="https://dhananjaya-a.github.io/resume.pdf" download>Download Resume</a>
+    <!-- Updated Resume Link -->
+    <a class="btn" href="https://your-new-link.com/resume.pdf" download>Download Resume</a>
+    <a class="btn" href="https://your-new-link.com/resume.pdf" target="_blank">View Resume</a>
   </header>
 
   <section id="about">
@@ -229,7 +246,7 @@
 
   <section id="contact">
     <h2>Contact</h2>
-    <p style="text-align:center;">Email: dhananjaya.a.9902@email.com | LinkedIn: <a href="#">linkedin.com/in/iamdhananjaya</a></p>
+    <p style="text-align:center;">Email: dhananjaya.a.9902@gmail.com | LinkedIn: <a href="#">www.linkedin.com/in/iamdhananjaya</a></p>
   </section>
 
   <footer>
