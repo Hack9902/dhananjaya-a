@@ -4,21 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="DHANANJAYA A - Data Analyst Portfolio"/>
-  <title>Dhananjaya A - Data Analyst Portfolio</title>
+  <title>DHANANJAYA A - Data Analyst Portfolio</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Roboto', sans-serif;
       line-height: 1.6;
       background-color: #f4faff;
       color: #333;
-      scroll-behavior: smooth; /* Smooth scrolling */
+      scroll-behavior: smooth;
+    }
+
+    /* Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     nav {
@@ -29,23 +38,21 @@
       top: 0;
       z-index: 1000;
     }
-
     nav a {
       margin: 0 15px;
       color: white;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s ease;
     }
-
-    nav a:hover {
-      color: #222;
-    }
+    nav a:hover { color: #222; }
 
     header {
       background: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?fit=crop&w=1500&q=80') no-repeat center center/cover;
       color: white;
       text-align: center;
       padding: 80px 20px;
+      animation: fadeInUp 1s ease forwards;
     }
 
     .profile-img {
@@ -59,6 +66,7 @@
 
     header h1 {
       font-size: 2.8rem;
+      letter-spacing: 1px;
     }
 
     header p {
@@ -72,21 +80,15 @@
       padding: 10px 20px;
       font-size: 1rem;
       border-radius: 5px;
-      margin-top: 20px;
+      margin-top: 10px;
       text-decoration: none;
       font-weight: bold;
+      transition: background 0.3s ease, transform 0.3s ease;
     }
 
-    /* Hover effect for skills */
-    .skills-list .skill:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-    }
-
-    /* Hover effect for project items */
-    .projects .project:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    header .btn:hover {
+      background-color: #e0f7ff;
+      transform: scale(1.05);
     }
 
     section {
@@ -99,6 +101,12 @@
       text-align: center;
       margin-bottom: 40px;
       font-size: 2rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    section.fade-in {
+      animation-delay: 0.2s;
     }
 
     .skills-list {
@@ -115,7 +123,12 @@
       width: 220px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       text-align: center;
-      transition: all 0.3s ease; /* Smooth hover transition */
+      transition: all 0.4s ease;
+    }
+
+    .skill:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
 
     .projects .project {
@@ -127,7 +140,12 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       flex-wrap: wrap;
       gap: 20px;
-      transition: all 0.3s ease; /* Smooth hover transition */
+      transition: all 0.4s ease;
+    }
+
+    .projects .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
 
     .projects img {
@@ -141,6 +159,37 @@
       flex: 1;
     }
 
+    /* Certification Styles */
+    .certifications {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .certification-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 220px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: all 0.4s ease;
+    }
+
+    .certification-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .certification-card img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+      object-fit: contain;
+    }
+
     footer {
       background-color: #38b6ff;
       color: white;
@@ -149,93 +198,50 @@
       margin-top: 40px;
     }
 
-    /* Mobile responsiveness */
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
+      header h1 { font-size: 2rem; }
       .projects .project {
         flex-direction: column;
         align-items: center;
         text-align: center;
       }
-
-      .projects img {
-        margin-bottom: 10px;
-      }
-    }
-
-    /* Testimonial Section */
-    .testimonials {
-      background-color: #f8f9fa;
-      padding: 40px 20px;
-      margin-top: 60px;
-    }
-
-    .testimonials h2 {
-      font-size: 2.5rem;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .testimonial {
-      text-align: center;
-      background: #ffffff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
-    }
-
-    .testimonial p {
-      font-size: 1.1rem;
-      color: #555;
-      font-style: italic;
-    }
-
-    .testimonial .author {
-      margin-top: 15px;
-      font-weight: bold;
+      .projects img { margin-bottom: 10px; }
     }
 
     .profile-container {
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    .profile-container .btn {
-      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
 
-  <nav>
+  <nav class="fade-in">
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
     <a href="#contact">Contact</a>
-    <a href="#testimonials">Testimonials</a>
   </nav>
 
   <header>
-    <!-- Updated Profile Image -->
     <div class="profile-container">
       <img class="profile-img" src="https://dhananjaya-a.github.io/dhananjaya-a/profile.jpg" alt="Dhananjaya's Profile Picture" />
-      <a class="btn" href="https://dhananjaya-a.github.io/dhananjaya-a/resume.pdf" download>Download Resume</a>
+      <a class="btn" href="https://dhananjaya-a.github.io/dhananjaya-a/resume.pdf" target="_blank">View Resume</a>
     </div>
-    <h1>Dhananjaya A</h1>
+    <h1>DHANANJAYA A</h1>
     <p>Data Analyst | Excel | SQL | Power BI | Python</p>
-    <a class="btn" href="https://dhananjaya-a.github.io/dhananjaya-a/resume.pdf" target="_blank">View Resume</a>
   </header>
 
-  <section id="about">
+  <section id="about" class="fade-in">
     <h2>About Me</h2>
     <p>I'm a passionate data analyst skilled in extracting insights using tools like Excel, SQL, Power BI, and Python. I help businesses make informed decisions through data visualization and dashboard reporting.</p>
   </section>
 
-  <section id="skills">
+  <section id="skills" class="fade-in">
     <h2>Skills</h2>
     <div class="skills-list">
       <div class="skill">
@@ -257,7 +263,7 @@
     </div>
   </section>
 
-  <section id="projects" class="projects">
+  <section id="projects" class="projects fade-in">
     <h2>Projects</h2>
 
     <div class="project">
@@ -288,28 +294,34 @@
     </div>
   </section>
 
-  <!-- Testimonial Section -->
-  <section id="testimonials" class="testimonials">
-    <h2>What People Say</h2>
-
-    <div class="testimonial">
-      <p>"Dhananjaya's analysis helped our team make data-driven decisions that improved our workflow and performance. His technical skills and problem-solving approach are impressive!"</p>
-      <div class="author">John Doe, Team Leader</div>
-    </div>
-
-    <div class="testimonial">
-      <p>"I had the pleasure of working with Dhananjaya on several projects. His expertise in SQL and data visualization tools is top-notch!"</p>
-      <div class="author">Jane Smith, Senior Analyst</div>
+  <section id="certifications" class="fade-in">
+    <h2>Certifications</h2>
+    <div class="certifications">
+      <div class="certification-card">
+        <img src="https://via.placeholder.com/100" alt="Certification 1">
+        <h3>Data Analyst Certification</h3>
+        <p>Completed a certification course in Data Analysis with Excel and Power BI</p>
+      </div>
+      <div class="certification-card">
+        <img src="https://via.placeholder.com/100" alt="Certification 2">
+        <h3>SQL for Data Science</h3>
+        <p>Completed a course on SQL querying for data science and analytics</p>
+      </div>
+      <div class="certification-card">
+        <img src="https://via.placeholder.com/100" alt="Certification 3">
+        <h3>Python for Data Analysis</h3>
+        <p>Completed a Python certification focused on data analysis with Pandas</p>
+      </div>
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="fade-in">
     <h2>Contact</h2>
     <p style="text-align:center;">Email: dhananjaya.a.9902@gmail.com | LinkedIn: <a href="#">www.linkedin.com/in/iamdhananjaya</a></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Dhananjaya A | All Rights Reserved</p>
+    <p>&copy; 2025 DHANANJAYA A | All Rights Reserved</p>
   </footer>
 
 </body>
