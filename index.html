@@ -1,237 +1,71 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Dhananjaya A - Data Analyst Portfolio"/>
-  <title>Dhananjaya A - Data Analyst Portfolio</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dhananjaya A | Data Analyst Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
       font-family: 'Roboto', sans-serif;
-      line-height: 1.6;
-      background-color: #f4faff;
-      color: #333;
-    }
-
-    nav {
-      background-color: #38b6ff;
-      padding: 1rem;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav a {
-      margin: 0 15px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
+      background-color: #f4f6f8;
       color: #222;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
     }
-
     header {
-      background: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?fit=crop&w=1500&q=80') no-repeat center center/cover;
+      background: #4da8da;
       color: white;
+      padding: 3rem;
       text-align: center;
-      padding: 80px 20px;
     }
-
-    .profile-img {
-      width: 150px;
-      height: 150px;
+    .profile-pic {
+      max-width: 150px;
       border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid white;
-      margin-bottom: 1rem;
+      display: block;
+      margin: 0 auto 1rem;
     }
-
-    header h1 {
-      font-size: 2.8rem;
-    }
-
-    header p {
-      font-size: 1.2rem;
-    }
-
-    header .btn {
-      background-color: #ffffff;
-      color: #0077b6;
-      border: none;
-      padding: 10px 20px;
-      font-size: 1rem;
-      border-radius: 5px;
-      margin-top: 20px;
+    nav a {
+      color: white;
       text-decoration: none;
-      font-weight: bold;
+      margin: 0 15px;
     }
-
     section {
-      padding: 60px 20px;
+      padding: 3rem 1rem;
       max-width: 1000px;
       margin: auto;
     }
-
-    section h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 2rem;
-    }
-
-    .skills-list {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .skill {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      width: 220px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    .projects .project {
-      display: flex;
-      background: white;
-      margin-bottom: 20px;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .projects img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-
-    .project-details {
-      flex: 1;
-    }
-
     footer {
-      background-color: #38b6ff;
+      background: #4da8da;
       color: white;
       text-align: center;
       padding: 1rem;
-      margin-top: 40px;
-    }
-
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      .projects .project {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .projects img {
-        margin-bottom: 10px;
-      }
     }
   </style>
 </head>
 <body>
 
+  <header>
+    <img src="profile.jpg" alt="Dhananjaya A" class="profile-pic">
+    <h1>Dhananjaya A</h1>
+    <p>Aspiring Data Analyst | SQL | Excel | Power BI</p>
+  </header>
+
   <nav>
     <a href="#about">About</a>
-    <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <header>
-    <img class="profile-img" src="profile.jpg" alt="Dhananjaya's Profile Picture" />
-    <h1>Dhananjaya A</h1>
-    <p>Data Analyst | Excel | SQL | Power BI | Python</p>
-    <a class="btn" href="resume.pdf" download>Download Resume</a>
-  </header>
-
   <section id="about">
     <h2>About Me</h2>
-    <p>I'm a passionate data analyst skilled in extracting insights using tools like Excel, SQL, Power BI, and Python. I help businesses make informed decisions through data visualization and dashboard reporting.</p>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-list">
-      <div class="skill">
-        <h3>SQL</h3>
-        <p>Advanced querying and relational databases</p>
-      </div>
-      <div class="skill">
-        <h3>Excel</h3>
-        <p>Dashboards, PivotTables, Formulas</p>
-      </div>
-      <div class="skill">
-        <h3>Power BI</h3>
-        <p>Dynamic dashboards and DAX measures</p>
-      </div>
-      <div class="skill">
-        <h3>Python</h3>
-        <p>Pandas, Data Cleaning, Visualization</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
-
-    <div class="project">
-      <img src="https://via.placeholder.com/150" alt="Sales Dashboard">
-      <div class="project-details">
-        <h3>Sales Dashboard</h3>
-        <p>Created an interactive Power BI dashboard to monitor regional sales performance and KPIs.</p>
-        <strong>Tools:</strong> Power BI, Excel
-      </div>
-    </div>
-
-    <div class="project">
-      <img src="https://via.placeholder.com/150" alt="HR Analytics">
-      <div class="project-details">
-        <h3>HR Analytics</h3>
-        <p>Performed attrition and performance analysis using SQL and created summary reports.</p>
-        <strong>Tools:</strong> SQL, Excel
-      </div>
-    </div>
-
-    <div class="project">
-      <img src="https://via.placeholder.com/150" alt="Finance Tracker">
-      <div class="project-details">
-        <h3>Finance Tracker</h3>
-        <p>Automated monthly financial report using Excel formulas and dashboards.</p>
-        <strong>Tools:</strong> Excel, Power Query
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p style="text-align:center;">Email: dhananjaya@email.com | LinkedIn: <a href="#">linkedin.com/in/dhananjaya</a></p>
+    <p>Hello! I'm a passionate data enthusiast skilled in SQL, Excel, and Power BI. I enjoy solving real-world problems through data analysis and visualization. My goal is to work as a Data Analyst and continuously improve my skills in the field.</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Dhananjaya A | All Rights Reserved</p>
+    <p>&copy; 2025 Dhananjaya A | Data Analyst Portfolio</p>
   </footer>
 
 </body>
