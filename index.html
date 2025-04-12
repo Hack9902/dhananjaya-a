@@ -165,6 +165,48 @@
         margin-bottom: 10px;
       }
     }
+
+    /* Testimonial Section */
+    .testimonials {
+      background-color: #f8f9fa;
+      padding: 40px 20px;
+      margin-top: 60px;
+    }
+
+    .testimonials h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .testimonial {
+      text-align: center;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    .testimonial p {
+      font-size: 1.1rem;
+      color: #555;
+      font-style: italic;
+    }
+
+    .testimonial .author {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .profile-container {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .profile-container .btn {
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
@@ -174,16 +216,18 @@
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
+    <a href="#testimonials">Testimonials</a>
   </nav>
 
   <header>
     <!-- Updated Profile Image -->
-    <img class="profile-img" src="https://new-image-url.com/profile.jpg" alt="Dhananjaya's Profile Picture" />
+    <div class="profile-container">
+      <img class="profile-img" src="https://dhananjaya-a.github.io/dhananjaya-a/profile.jpg" alt="Dhananjaya's Profile Picture" />
+      <a class="btn" href="https://dhananjaya-a.github.io/dhananjaya-a/resume.pdf" download>Download Resume</a>
+    </div>
     <h1>Dhananjaya A</h1>
     <p>Data Analyst | Excel | SQL | Power BI | Python</p>
-    <!-- Updated Resume Link -->
-    <a class="btn" href="https://your-new-link.com/resume.pdf" download>Download Resume</a>
-    <a class="btn" href="https://your-new-link.com/resume.pdf" target="_blank">View Resume</a>
+    <a class="btn" href="https://dhananjaya-a.github.io/dhananjaya-a/resume.pdf" target="_blank">View Resume</a>
   </header>
 
   <section id="about">
@@ -241,6 +285,21 @@
         <p>Automated monthly financial report using Excel formulas and dashboards.</p>
         <strong>Tools:</strong> Excel, Power Query
       </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section id="testimonials" class="testimonials">
+    <h2>What People Say</h2>
+
+    <div class="testimonial">
+      <p>"Dhananjaya's analysis helped our team make data-driven decisions that improved our workflow and performance. His technical skills and problem-solving approach are impressive!"</p>
+      <div class="author">John Doe, Team Leader</div>
+    </div>
+
+    <div class="testimonial">
+      <p>"I had the pleasure of working with Dhananjaya on several projects. His expertise in SQL and data visualization tools is top-notch!"</p>
+      <div class="author">Jane Smith, Senior Analyst</div>
     </div>
   </section>
 
